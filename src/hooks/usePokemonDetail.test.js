@@ -1,9 +1,10 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
 import { usePokemonDetail } from './usePokemonDetail'
-import * as pokemonService from '../services/pokemonService'
+import * as pokemonService from '../service/pokemonService'
 
-vi.mock('../services/pokemonService')
+// ✅ FIXED PATH
+vi.mock('../service/pokemonService')
 
 const mockPokemon = {
   id: 1, name: 'bulbasaur',

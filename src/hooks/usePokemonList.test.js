@@ -1,9 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 import { renderHook, waitFor } from '@testing-library/react'
 import { usePokemonList } from './usePokemonList'
-import * as pokemonService from '../services/pokemonService'
+import * as pokemonService from '../service/pokemonService'
 
-vi.mock('../services/pokemonService')
+vi.mock('../service/pokemonService')
 
 const mockPokemonList = [{ name: 'bulbasaur', url: '' }, { name: 'charmander', url: '' }]
 const mockBulbasaur = {
