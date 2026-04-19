@@ -1,0 +1,21 @@
+export const TYPE_COLORS = {
+  fire:     { bg: '#FF6B35', light: '#FFF0EA' },
+  water:    { bg: '#3B9EE2', light: '#EAF4FD' },
+  grass:    { bg: '#4CAF7D', light: '#EAF7EF' },
+  electric: { bg: '#F5C542', light: '#FEF9E7' },
+  psychic:  { bg: '#E05FA3', light: '#FDE8F4' },
+  ice:      { bg: '#5BC8D4', light: '#E8F8FA' },
+  dragon:   { bg: '#6A5ACD', light: '#EEEAFC' },
+  dark:     { bg: '#3D3D5C', light: '#EAEAF0' },
+  fairy:    { bg: '#E8739A', light: '#FDE8EF' },
+  normal:   { bg: '#8A8A8A', light: '#F0F0F0' },
+  fighting: { bg: '#C62828', light: '#FDEAEA' },
+  flying:   { bg: '#7986CB', light: '#ECEFFE' },
+  poison:   { bg: '#8E44AD', light: '#F3E8FB' },
+  ground:   { bg: '#C8983D', light: '#FBF3E4' },
+  rock:     { bg: '#8D7648', light: '#F3EFE8' },
+  bug:      { bg: '#6FAB2A', light: '#EEF7E3' },
+  ghost:    { bg: '#5C4E8E', light: '#EDEAF8' },
+  steel:    { bg: '#7A8FA6', light: '#EDF0F3' },
+}
+
