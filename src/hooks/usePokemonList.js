@@ -9,6 +9,7 @@ export function usePokemonList() {
     const [loadingMore, setLoadingMore] = useState(false)
     const [error, setError] = useState(null)
     const [searchQuery, setSearchQuery] = useState('')
+    const [offset, setOffset] = useState(0)
     const [hasMore, setHasMore] = useState(true)
     const isFetching = useRef(false)
 
@@ -41,7 +42,18 @@ export function usePokemonList() {
         loadPokemon(0, true)
     }, [])
 
-
+    // Infinite scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            const nearBottom =
+                window.innerHeight + window.scrollY >= document.body.offsetHeight - 300
+            if (nearBottom && !isFetching.current) {
+                loadPokemon(offset)
+            }
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [offset, loadPokemon])
 
     const filteredPokemon = pokemon.filter(
         (p) =>
